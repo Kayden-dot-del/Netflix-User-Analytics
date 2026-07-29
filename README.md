@@ -760,9 +760,10 @@ The Power BI dashboard provides an interactive view of Netflix's business perfor
 ### &#x20;                **👤 Author**
 
 ###### &#x20;                   **Ashutosh Jha**
-
+                            
 ###### &#x20;               **Aspiring Data Analyst**
 
+Github: https://github.com/Ashutosh-Jha07
 
 
 * &#x20;     **SQL**
