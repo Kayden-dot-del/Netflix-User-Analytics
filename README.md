@@ -9,18 +9,11 @@
 ### **Project Overview**
 
 
-
 **This project demonstrates the complete Data Analytics workflow by analyzing Netflix user behavior, subscription revenue, viewing patterns, and customer engagement.**
-
-
 
 **The project combines SQL, Python, and Power BI to transform raw streaming data into meaningful business insights.**
 
-
-
 **The dataset used in this project is AI-generated synthetic data designed for portfolio and educational purposes.**
-
-
 
 ### 
 
@@ -54,45 +47,28 @@
 ### Dataset Information
 
 
-
 #### Dataset Name
-
 
 
 Netflix User Analytics
 
-
-
 ##### Rows
-
-
 
 20,000
 
-
-
 ##### Unique Users
-
-
 
 3,239
 
-
-
 ##### Columns
 
-
-
 39
-
 
 
 ##### Time Period
 
 
-
 July 2025 – July 2026
-
 
 
 ##### Dataset Includes
@@ -110,99 +86,46 @@ July 2025 – July 2026
 * Viewing Sessions
 
 
-
-
-
 ### Project Structure
-
-
-
 Netflix-User-Analytics/
-
 │
-
 ├── Dataset/
-
 │   └── Netflix\_User\_Analytics.xlsx
-
 │
-
 ├── SQL/
-
-│   ├── Database.sql
-
-│   ├── Business\_Queries.sql
-
-│   ├── Views.sql
-
-│   ├── Stored\_Procedures.sql
-
-│   ├── Functions.sql
-
-│   └── Indexes.sql
-
-│
-
+│   ├── Netflix\_User\_Analytics.sql
+|
 ├── Python/
-
 │   └── Netflix\_User\_Analytics.ipynb
-
-│
-
+|
 ├── Power BI/
-
 │   ├── Netflix Dashboard.pbix
-
-│   └── Netflix Theme.json
-
-│
-
+│  
 ├── Images/
-
 │   ├── Dashboard.png
-
-│   ├── Revenue\_by\_Plan.png
-
-│   ├── Revenue\_by\_Country.png
-
-│   ├── Revenue\_by\_City.png
-
+│   ├── Revenue\_by\_Subscription\_Plan.png
+│   ├── Revenue\_by\_Country\_Chart.png
+│   ├── Top\_Cities\_By\_Revenue\_Chart.png
 │   ├── Genre\_Watch\_Time.png
-
 │   ├── Device\_Usage.png
-
 │   ├── Monthly\_Trend.png
-
-│   └── Top\_Watched\_Titles.png
-
-│
+│   |---Average\_User\_Rating.png
+|   |---Internet\_Connection\_Type.png
+|   |---Movies\_and\_TV\_Show\_Distribution.png
+|   |---Top\_Countries\_By\_Active\_Users.png
+|   |---Top\_Users.png
+|   |---Top\_Watched\_Titles.png
 
 ├── README.md
-
 │
-
 └── LICENSE
-
-
-
-
-
-
-
-
-
-
-
 
 
 
 
 ### SQL Analysis
 
-
-
 The SQL portion of this project focuses on database design, querying, and business analysis.
-
 
 
 #### SQL Topics Covered
@@ -220,15 +143,7 @@ The SQL portion of this project focuses on database design, querying, and busine
 * Indexes
 
 
-
-
-
-
-
 ### SQL Questions
-
-
-
 
 
 Q1. Which subscription plan generates the highest total revenue?
@@ -274,7 +189,6 @@ Q20. Average Revenue Per User  by Subscription Plan
 Q21. Which Titles Receive the Highest Average User Ratings?
 
 
-
 ### SQL ANSWERS
 
 1. SELECT \*
@@ -285,36 +199,31 @@ Q21. Which Titles Receive the Highest Average User Ratings?
 
 
 
-2\. SELECT \*
+2. SELECT \*
 
 &#x20; FROM no\_of\_subscription\_users
 
 &#x20; ORDER BY Total\_Users DESC;
 
 
-
-3\. SELECT \*
+3. SELECT \*
 
 &#x20;  FROM average\_monthly\_subscription\_fee;
 
-
-
-4\. SELECT \*
+4. SELECT \*
 
 &#x20; FROM content\_type\_popularity
 
 &#x20; ORDER BY Total\_Watches DESC;
 
 
-
-5\. SELECT \*
+5. SELECT \*
 
 &#x20;  FROM top\_titles
 
 &#x20;  ORDER BY Watch\_Count DESC
 
 &#x20;  LIMIT 10;
-
 
 
 6\. SELECT \*
@@ -324,7 +233,6 @@ Q21. Which Titles Receive the Highest Average User Ratings?
 &#x20; ORDER BY Total\_Watches DESC;
 
 
-
 7.SELECT \*
 
 &#x20;FROM device\_usage
@@ -332,22 +240,19 @@ Q21. Which Titles Receive the Highest Average User Ratings?
 &#x20;ORDER BY Total\_Users DESC;
 
 
-
 8.FROM operating\_system\_usage
 
 &#x20;ORDER BY Total\_Users DESC;
 
 
-
-9\. SELECT \*
+9. SELECT \*
 
 &#x20; FROM age\_rating\_watch\_time
 
 &#x20; ORDER BY Avg\_Watch\_Time DESC;
 
 
-
-10\. SELECT \*
+10. SELECT \*
 
 &#x20;   FROM country\_watch\_time
 
@@ -364,24 +269,21 @@ Q21. Which Titles Receive the Highest Average User Ratings?
 &#x20;  ORDER BY Total\_Watch\_Time DESC;
 
 
-
-12\. SELECT \*
+12. SELECT \*
 
 &#x20;   FROM payment\_method
 
 &#x20;   ORDER BY Total\_Payments DESC;
 
 
-
-13\. SELECT \*
+13. SELECT \*
 
 &#x20;   FROM completion\_by\_genre
 
 &#x20;   ORDER BY Avg\_Completion DESC;
 
 
-
-14\. SELECT \*
+14. SELECT \*
 
 &#x20;   FROM churn\_distribution
 
@@ -389,7 +291,7 @@ Q21. Which Titles Receive the Highest Average User Ratings?
 
 
 
-15\. SELECT \*
+15. SELECT \*
 
 &#x20;   FROM rank\_users\_watch\_time
 
@@ -399,7 +301,7 @@ Q21. Which Titles Receive the Highest Average User Ratings?
 
 
 
-16\. SELECT \*
+16. SELECT \*
 
 &#x20;   FROM running\_revenue
 
@@ -407,7 +309,7 @@ Q21. Which Titles Receive the Highest Average User Ratings?
 
 
 
-17\. SELECT \*
+17. SELECT \*
 
 &#x20;   FROM user\_category
 
@@ -415,7 +317,7 @@ Q21. Which Titles Receive the Highest Average User Ratings?
 
 
 
-18\. SELECT \*
+18. SELECT \*
 
 &#x20;   FROM monthly\_watch\_trend
 
@@ -423,7 +325,7 @@ Q21. Which Titles Receive the Highest Average User Ratings?
 
 
 
-19\. SELECT \*
+19. SELECT \*
 
 &#x20;   FROM top3\_users\_each\_country
 
@@ -431,7 +333,7 @@ Q21. Which Titles Receive the Highest Average User Ratings?
 
 
 
-20\. SELECT \*
+20. SELECT \*
 
 &#x20;   FROM avg\_Revenue\_subscription\_plan
 
@@ -439,7 +341,7 @@ Q21. Which Titles Receive the Highest Average User Ratings?
 
 
 
-21\. SELECT \*
+21. SELECT \*
 
 &#x20;   FROM top\_rated\_titles
 
@@ -452,9 +354,7 @@ Q21. Which Titles Receive the Highest Average User Ratings?
 ### Python Analysis
 
 
-
 Python was used for data cleaning, exploratory data analysis (EDA), KPI calculation, and visualization.
-
 
 
 * Data Cleaning
@@ -465,163 +365,107 @@ Python was used for data cleaning, exploratory data analysis (EDA), KPI calculat
 * Checked Duplicate Records
 
 
-
 ### PYTHON Questions
 
-
-
 Q1. What is the total number of unique users?
-
-
 
 Objective: Determine the total number of unique Netflix users in the dataset.
 
 
-
 Q2. What is the total revenue generated?
-
-
 
 Objective: Calculate the total subscription revenue generated from all users.
 
 
-
 Q3. What is the Average Revenue Per User (ARPU)?
-
-
 
 Objective: Measure the average revenue generated by each unique user.
 
 
-
 Q4. Which subscription plan generates the highest revenue?
-
-
 
 Objective: Identify the subscription plan that contributes the most to total revenue.
 
 
-
 Q5. Which countries contribute the most revenue?
-
-
 
 Objective: Find the top 10 countries generating the highest subscription revenue.
 
 
-
 Q6. Which cities generate the highest revenue?
-
-
 
 Objective: Identify the top 10 cities contributing the highest subscription revenue.
 
 
-
 Q7. Which genres have the highest total watch time?
-
-
 
 Objective: Analyze which content genres generate the highest total watch time.
 
 
-
 Q8. How does total watch time vary by month?
-
-
 
 Objective: Analyze monthly viewing trends to identify seasonal patterns in user engagement.
 
 
-
 Q9. What is the distribution of Movies vs TV Shows watched?
-
-
 
 Objective: Compare user viewing preferences between Movies and TV Shows.
 
 
-
 Q10. Which device types are most commonly used for streaming?
-
-
 
 Objective: Identify the most popular devices used by users to stream Netflix content.
 
 
-
 Q11. Which users spend the most time watching content?
-
-
 
 Objective: Identify the top 10 users with the highest total watch time.
 
 
-
 Q12. Which titles are watched the most?
-
-
 
 Objective: Determine the top 10 most-watched movies and TV shows based on viewing sessions.
 
 
-
 Q13. Which countries have the highest number of active users?
-
-
 
 Objective: Identify the top 10 countries with the largest active user base.
 
 
-
 Q14. Which genres receive the highest average user ratings?
-
-
 
 Objective: Analyze user ratings to determine the highest-rated content genres.
 
 
-
 Q15. Which internet connection types are most frequently used for streaming?
-
-
 
 Objective: Analyze the distribution of internet connection types used while streaming Netflix content.
 
 
-
 #### PYTHON Answers
-
-
 
 1. 3,239 unique users
 * Represents the full customer base included in the analysis.
 * Serves as the denominator for KPIs like ARPU.
 
 
-
-2\. $21,336,179.46
+2. $21,336,179.46
 
 * Total subscription revenue summed across all records.
 * Core financial KPI for the platform.
 
 
-
-3\. $6,587.27
+3. $6,587.27
 
 * Calculated as Total Revenue ÷ Total Unique Users.
 * Useful for comparing value across subscription plans and segments.
 
-
-
-4\. Premium — $15,422,400.40
+4. Premium — $15,422,400.40
 
 * Premium subscribers are the largest revenue contributor.
 * Opportunity: upsell Standard/Basic users to Premium via targeted offers.
 
-
-
-5\. The top contributors (highest to lowest) are:
+5. The top contributors (highest to lowest) are:
 
 * &#x20;      South Korea
 * &#x20;      Japan
@@ -637,8 +481,7 @@ Objective: Analyze the distribution of internet connection types used while stre
 These markets should be prioritized for retention campaigns and premium upsell offers.
 
 
-
-6\. Top 10 cities generating the highest revenue (from the city revenue chart), led by major metro hubs such as
+6. Top 10 cities generating the highest revenue (from the city revenue chart), led by major metro hubs such as
 
 * &#x20;          Seoul
 * &#x20;          Busan
@@ -651,10 +494,7 @@ These markets should be prioritized for retention campaigns and premium upsell o
 * &#x20;          Delhi
 * &#x20;          Kolkata
 
-
-
 These cities represent concentrated, high-value markets for marketing investment.
-
 
 
 7.Ranked from highest to lowest total watch time:
@@ -676,13 +516,9 @@ These cities represent concentrated, high-value markets for marketing investment
 * &#x20;                 Mystery
 
 
-
-8\. Watch time fluctuates across the year with visible peaks and troughs rather than a flat trend viewing tends to rise around certain months (consistent with holiday/vacation periods) and dip in others.
-
-
+8. Watch time fluctuates across the year with visible peaks and troughs rather than a flat trend viewing tends to rise around certain months (consistent with holiday/vacation periods) and dip in others.
 
 These seasonal patterns can guide content release scheduling and marketing campaign timing.
-
 
 
 9.Movies make up the clear majority of watched content, with TV Shows representing a smaller (but still meaningful)
@@ -690,18 +526,12 @@ These seasonal patterns can guide content release scheduling and marketing campa
 A balanced content library across both formats supports broader user satisfaction.
 
 
-
-10\. Mobile and Smart TV are the leading devices, followed by Laptop, Tablet, Desktop and Gaming Console
-
-
+10. Mobile and Smart TV are the leading devices, followed by Laptop, Tablet, Desktop and Gaming Console
 
 Streaming experience and app performance should be optimized first for the top devices.
 
 
-
-11\.  Top 10 Users by Total Watch Time (minutes)
-
-
+11.  Top 10 Users by Total Watch Time (minutes)
 
 Rank	User ID	Watch Time (min)
 
@@ -728,32 +558,30 @@ Rank	User ID	Watch Time (min)
 These are the platform's most engaged users — strong candidates for loyalty/retention programs.
 
 
-
-12\. Top 10 Most-Watched Titles (by viewing sessions)
-
+12. Top 10 Most-Watched Titles (by viewing sessions)
 
 
 Rank	Title	                      Views
 
-1	Ancient Ascension	        43
+1	Ancient Ascension	                43
 
-2	House of Obsidian	        41
+2	House of Obsidian	                41
 
-3	Sacred Ascension: Redemption	41
+3	Sacred Ascension: Redemption    	41
 
-4	Quiet Skyline: Redemption	40
+4	Quiet Skyline: Redemption        	40
 
-5	Sons of Ember	                39
+5	Sons of Ember	                    39
 
-6	Sons of Ravens              	39
+6	Sons of Ravens                   	39
 
-7	Quiet Requiem Reborn	        39
+7	Quiet Requiem Reborn	            39
 
-8	Shattered Legacy Awakens	39
+8	Shattered Legacy Awakens	        39
 
-9	Daughters of Wolves	        38
+9	Daughters of Wolves	              38
 
-10	Broken Paradox: Redemption	38
+10	Broken Paradox: Redemption    	38
 
 
 
@@ -765,89 +593,82 @@ Rank	Title	                      Views
 
 Rank	Country	            Active Users
 
-1	United States	          711
+1	United States	             711
 
-2	India	                  656
+2	India	                     656
 
-3	United Kingdom         	  319
+3	United Kingdom         	   319
 
-4	Canada	                  271
+4	Canada	                   271
 
-5	France	                  248
+5	France	                   248
+ 
+6	Germany	                   240
 
-6	Germany	                  240
+7	Japan	                     223
 
-7	Japan	                  223
+8	South Korea	               197
 
-8	South Korea	          197
+9	Brazil	                   193
 
-9	Brazil	                  193
-
-10	Australia	          181
-
-
-
+10	Australia	               181
+  
 
 
 14.Genres with Highest Average User Ratings
-
 
 
 Rank	Genre	            Avg. Rating
 
 1	Mystery	              3.88
 
-2	Thriller	      3.87
+2	Thriller	            3.87
 
-3	Biography	      3.86
+3	Biography	            3.86
 
 4	Action	              3.86
 
-5	Documentary	      3.85
+5	Documentary	          3.85
 
-6	Animation	      3.84
+6	Animation	            3.84
 
-7	Adventure	      3.84
+7	Adventure	            3.84
 
 8	Fantasy	              3.84
 
-9	Drama	              3.83
+9	Drama	                3.83
 
-10	Horror	              3.83
+10	Horror	            3.83
 
-11	Romance	              3.82
+11	Romance	             3.82
 
-12	Comedy	              3.82
+12	Comedy	             3.82
 
-13	Family	              3.82
+13	Family	             3.82
 
-14	Sci-Fi	              3.81
+14	Sci-Fi	             3.81
 
-15	Crime	              3.79
-
-
+15	Crime	               3.79
 
 Rating differences across genres are fairly narrow (3.79–3.88 on average), suggesting broadly consistent content quality/satisfaction across the catalog
 
 
-
-15\. Internet Connection Types Used for Streaming
+15. Internet Connection Types Used for Streaming
 
 
 
 Connection Type	   Sessions	      Share
 
-WIFI	            8,184	      40.9%
+WIFI	           8,184	          40.9%
 
-Broadband	    5,934	      29.7%
+Broadband	       5,934	           29.7%
 
-Mobile Data	    5,882	      29.4%
+Mobile Data	    5,882	             29.4%
 
 
 
 * WIFI is the dominant connection type; Broadband and Mobile Data are used at nearly equal rates.
 * Insights support decisions on adaptive bitrate streaming and buffering optimization across network types.
-
 
 
 ### 
@@ -857,21 +678,13 @@ Mobile Data	    5,882	      29.4%
 The Power BI dashboard provides an interactive view of Netflix's business performance.
 
 
-
 #### KPIs
 
 * Total Revenue
-* 
 * Total Users
-* 
 * ARPU
-* 
 * Average Rating
-* 
 * Total Watch Time
-
-
-
 
 
 #### Dashboard Features
@@ -886,9 +699,6 @@ The Power BI dashboard provides an interactive view of Netflix's business perfor
 * Drill-through Analysis
 
 
-
-
-
 ### Key Insights
 
 * The dataset contains 20,000 streaming records from 3,239 unique users.
@@ -900,9 +710,6 @@ The Power BI dashboard provides an interactive view of Netflix's business perfor
 * Mobile devices and Smart TVs are among the most popular streaming platforms.
 
 
-
-
-
 ### Business Recommendations
 
 * Promote upgrades to higher-tier subscription plans.
@@ -911,11 +718,6 @@ The Power BI dashboard provides an interactive view of Netflix's business perfor
 * Expand marketing campaigns in top revenue-generating countries and cities.
 * Improve streaming performance for the most commonly used devices and internet connections.
 * Use user viewing patterns to enhance personalized recommendations.
-
-
-
-
-
 
 
 ### How to Run This Project
@@ -933,22 +735,15 @@ The Power BI dashboard provides an interactive view of Netflix's business perfor
 * Indexes.sql
 
 
-
-
-
 ##### Python
 
 1. Open Netflix\_User\_Analytics.ipynb.
 2. Install required libraries:
 
 
-
 &#x20;          pip install pandas numpy matplotlib openpyxl
 
-
-
-3\. Run the notebook from top to bottom.
-
+3. Run the notebook from top to bottom.
 
 
 ##### Power BI
@@ -958,14 +753,11 @@ The Power BI dashboard provides an interactive view of Netflix's business perfor
 3. Explore the interactive dashboard
 
 
-
 ### 
 
 &#x20;
 
-### &#x20;           **👤 Author**
-
-
+### &#x20;                **👤 Author**
 
 ###### &#x20;                   **Ashutosh Jha**
 
@@ -978,3 +770,4 @@ The Power BI dashboard provides an interactive view of Netflix's business perfor
 * &#x20;    **Power BI**
 * &#x20;    **Excel**
 
+* 
