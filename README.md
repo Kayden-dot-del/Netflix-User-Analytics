@@ -88,37 +88,35 @@ July 2025 – July 2026
 
 ### Project Structure
 Netflix-User-Analytics/
-│
-├── Dataset/
-│   └── Netflix\_User\_Analytics.xlsx
-│
-├── SQL/
-│   ├── Netflix\_User\_Analytics.sql
-|
-├── Python/
-│   └── Netflix\_User\_Analytics.ipynb
-|
-├── Power BI/
-│   ├── Netflix Dashboard.pbix
-│  
-├── Images/
-│   ├── Dashboard.png
-│   ├── Revenue\_by\_Subscription\_Plan.png
-│   ├── Revenue\_by\_Country\_Chart.png
-│   ├── Top\_Cities\_By\_Revenue\_Chart.png
-│   ├── Genre\_Watch\_Time.png
-│   ├── Device\_Usage.png
-│   ├── Monthly\_Trend.png
-│   |---Average\_User\_Rating.png
-|   |---Internet\_Connection\_Type.png
-|   |---Movies\_and\_TV\_Show\_Distribution.png
-|   |---Top\_Countries\_By\_Active\_Users.png
-|   |---Top\_Users.png
-|   |---Top\_Watched\_Titles.png
+ Dataset/
+   └── Netflix\_User\_Analytics.xlsx
+── SQL/
+   ├── Netflix\_User\_Analytics.sql
 
-├── README.md
-│
-└── LICENSE
+── Python/
+   └── Netflix\_User\_Analytics.ipynb
+
+── Power BI/
+   ├── Netflix Dashboard.pbix
+  
+── Images/
+   ── Dashboard.png
+   ── Revenue\_by\_Subscription\_Plan.png
+   ── Revenue\_by\_Country\_Chart.png
+   ── Top\_Cities\_By\_Revenue\_Chart.png
+   ── Genre\_Watch\_Time.png
+   ── Device\_Usage.png
+   ── Monthly\_Trend.png
+   ---Average\_User\_Rating.png
+   ---Internet\_Connection\_Type.png
+   ---Movies\_and\_TV\_Show\_Distribution.png
+   ---Top\_Countries\_By\_Active\_Users.png
+   ---Top\_Users.png
+   ---Top\_Watched\_Titles.png
+   
+── README.md
+
+── LICENSE
 
 
 
